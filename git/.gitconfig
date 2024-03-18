@@ -1,0 +1,46 @@
+[http]
+	version = HTTP/2
+	postBuffer = 1048576000
+
+[user]
+	name = Matthew Kevin Amadeus
+	email = mkamadeus.mka@gmail.com
+
+[core]
+	compression = 0
+	editor = nvim
+
+[pack]
+	windowMemory = 100m
+	packSizeLimit = 100m
+	threads = 1
+	deltaCacheSize = 512m
+
+[init]
+	defaultBranch = main
+
+[advice]
+	addIgnoredFile = false
+
+[push]
+	default = current
+
+[pull]
+	rebase = true
+
+[rebase]
+	autostash = true
+
+[rerere]
+	enabled = true
+
+[delta]
+	navigate = true
+	light = false
+
+[merge]
+	conflictstyle = zdiff3
+
+[diff]
+	colorMoved = default
+
