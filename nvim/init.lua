@@ -1,0 +1,2 @@
+require("mkamadeus")
+print("yo")

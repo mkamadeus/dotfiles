@@ -1,0 +1,292 @@
+k9s:
+  liveViewAutoRefresh: false
+  refreshRate: 2
+  maxConnRetry: 5
+  enableMouse: false
+  headless: false
+  logoless: false
+  crumbsless: false
+  readOnly: false
+  noExitOnCtrlC: false
+  noIcons: false
+  skipLatestRevCheck: false
+  logger:
+    tail: 100
+    buffer: 5000
+    sinceSeconds: 60
+    fullScreenLogs: false
+    textWrap: false
+    showTime: false
+  currentContext: xnd-jk-stg-aws-1
+  currentCluster: xnd-jk-stg-aws-1
+  clusters:
+    arn:aws:eks:ap-southeast-1:705506614808:cluster/xnd-sg-plg-aws-0:
+      namespace:
+        active: all
+        lockFavorites: false
+        favorites:
+        - argocd
+        - all
+        - default
+      view:
+        active: crd
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.35.0
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+        labels: {}
+      portForwardAddress: localhost
+    arn:aws:eks:ap-southeast-3:420361828844:cluster/xnd-jk-prod-cde-aws-0:
+      namespace:
+        active: all
+        lockFavorites: false
+        favorites:
+        - default
+      view:
+        active: context
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.35.0
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+        labels: {}
+      portForwardAddress: localhost
+    arn:aws:eks:ap-southeast-3:420361828844:cluster/xnd-jk-prod-pci-aws-0:
+      namespace:
+        active: all
+        lockFavorites: false
+        favorites:
+        - default
+      view:
+        active: context
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.35.0
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+        labels: {}
+      portForwardAddress: localhost
+    arn:aws:eks:ap-southeast-3:705506614808:cluster/xnd-jk-stg-pci-aws-0:
+      namespace:
+        active: all
+        lockFavorites: false
+        favorites:
+        - all
+        - default
+      view:
+        active: context
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.35.0
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+        labels: {}
+      portForwardAddress: localhost
+    trident-playground-0:
+      namespace:
+        active: all
+        lockFavorites: false
+        favorites:
+        - all
+        - kube-system
+        - default
+      view:
+        active: deploy
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.35.0
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+        labels: {}
+      portForwardAddress: localhost
+    trident-production-0:
+      namespace:
+        active: all
+        lockFavorites: false
+        favorites:
+        - all
+        - billing-live
+        - streaming-platform-live
+        - default
+      view:
+        active: crb
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.35.0
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+        labels: {}
+      portForwardAddress: localhost
+    trident-production-1:
+      namespace:
+        active: all
+        lockFavorites: false
+        favorites:
+        - all
+        - mobile-app-live
+        - default
+      view:
+        active: crb
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.35.0
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+        labels: {}
+      portForwardAddress: localhost
+    trident-production-pci-0:
+      namespace:
+        active: billing-live-pci
+        lockFavorites: false
+        favorites:
+        - all
+        - billing-live-pci
+        - default
+      view:
+        active: clusterrolebinding
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.35.0
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+        labels: {}
+      portForwardAddress: localhost
+    trident-staging-0:
+      namespace:
+        active: direct-debit-live
+        lockFavorites: false
+        favorites:
+        - direct-debit-exp-dev
+        - hr-ops-dev
+        - merchant-engagement-dev
+        - direct-debit-live
+        - default
+      view:
+        active: clusterrolebinding
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.35.0
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+        labels: {}
+      portForwardAddress: localhost
+    xnd-jk-stg-aws-1:
+      namespace:
+        active: all
+        lockFavorites: false
+        favorites:
+        - traefik
+        - all
+        - cashpay-dev
+        - charge-dev-pci
+        - aam-live-pci
+        - default
+      view:
+        active: deploy
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.35.0
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+        labels: {}
+      portForwardAddress: localhost
+    xnd-sg-plg-aws-0:
+      namespace:
+        active: all
+        lockFavorites: false
+        favorites:
+        - all
+        - default
+      view:
+        active: context
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.35.0
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+        labels: {}
+      portForwardAddress: localhost
+    xnd-sg-plg-aws-1:
+      namespace:
+        active: all
+        lockFavorites: false
+        favorites:
+        - default
+      view:
+        active: clusterrole
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.35.0
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+        labels: {}
+      portForwardAddress: localhost
+  thresholds:
+    cpu:
+      critical: 90
+      warn: 70
+    memory:
+      critical: 90
+      warn: 70
+  screenDumpDir: /var/folders/f9/_yq4lk7d3vxgkxyvtm8zrqvm0000gn/T/k9s-screens-matthewamadeus

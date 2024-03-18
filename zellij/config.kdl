@@ -1,0 +1,11 @@
+default_layout "layout"
+
+keybinds {
+  shared_except "locked" {
+      bind "Ctrl y" {
+        LaunchOrFocusPlugin "file:~/.config/zellij/plugins/harpoon.wasm" {
+            floating true; move_to_focused_tab true;
+        }
+      }
+  }
+}

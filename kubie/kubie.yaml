@@ -1,0 +1,7 @@
+prompt:
+  disable: true
+
+hooks:
+  start_ctx: >
+    kubie ns &&
+    k9s
