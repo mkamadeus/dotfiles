@@ -1,0 +1,24 @@
+repos:
+  - repo: https://github.com/rwxcorp/pre-commit-lua.git
+    rev: v1.0.0
+    hooks:
+      - id: stylua
+        name: stylua
+        files: \.lua$
+      - id: luacheck
+        name: luacheck
+        files: \.lua$
+        exclude: compiled\.lua$
+  - repo: https://github.com/adrienverge/yamllint.git
+    rev: v1.35.1
+    hooks:
+      - id: yamllint
+        name: yamllint
+        args: ["--strict", "-c=.yamllint"]
+        files: \.ya?ml$
+  - repo: https://github.com/google/yamlfmt.git
+    rev: v0.12.1
+    hooks:
+      - id: yamlfmt
+        name: yamlfmt
+        files: \.ya?ml$

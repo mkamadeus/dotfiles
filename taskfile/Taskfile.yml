@@ -1,0 +1,34 @@
+version: '3'
+tasks:
+  tf-update-provider-state:
+    dir: '{{.USER_WORKING_DIR}}'
+    cmds:
+      - cmd: terraform init
+        ignore_error: true
+      - terraform state replace-provider -auto-approve registry.terraform.io/-/aws registry.terraform.io/hashicorp/aws
+      - terraform providers lock -platform=linux_amd64 -platform=darwin_amd64
+  tf-validate:
+    dir: '{{.USER_WORKING_DIR}}'
+    cmds:
+      - terraform init
+      - tflint --fix
+      - tflint
+      - terraform fmt
+      - terraform validate
+  tf-update-provider:
+    dir: '{{.USER_WORKING_DIR}}'
+    cmds:
+      - task: terraform-update-provider-state
+      - task: terraform-validate
+  git-add-directory:
+    dir: '{{.USER_WORKING_DIR}}'
+    cmds:
+      - git add "$INCLUDE"
+      - git commit
+      - git push
+  git-pr-subdirectory:
+    dir: '{{.USER_WORKING_DIR}}'
+    cmds:
+      - git add .
+      - git commit -m "Update provider"
+      - git push origin HEAD

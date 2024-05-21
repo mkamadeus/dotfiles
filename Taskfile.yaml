@@ -1,5 +1,4 @@
 version: '3'
-
 tasks:
   setup:
     cmds:
@@ -14,38 +13,40 @@ tasks:
     silent: true
   setup-zsh:
     cmds:
-    - stow zsh
-    - cmd: cd private && stow zsh -t "../../"
-      ignore_error: true
+      - stow zsh
+      - cmd: cd private && stow zsh -t "../../"
+        ignore_error: true
   setup-git:
     cmd: stow git
   setup-kubernetes:
     cmds:
-    - task: setup-kubie
-    - task: setup-k9s
+      - task: setup-kubie
+      - task: setup-k9s
   setup-k9s:
     cmds:
-    - mkdir -p ~/.config/k9s
-    - stow k9s/ -t "../.config/k9s"
+      - mkdir -p ~/.config/k9s
+      - stow k9s/ -t "../.config/k9s"
   setup-kubie:
-    cmds: 
-    - mkdir -p "../.kube"
-    - stow kubie -t "../.kube/"
-    - cmd: cd private && stow kubernetes -t "../../.kube/"
-      ignore_error: true
+    cmds:
+      - mkdir -p "../.kube"
+      - stow kubie -t "../.kube/"
+      - cmd: cd private && stow kubernetes -t "../../.kube/"
+        ignore_error: true
   setup-starship:
     cmd: stow starship -t "../.config/"
   setup-nvim:
     cmds:
-    - mkdir -p ../.config/nvim 
-    - stow nvim -t "../.config/nvim/"
+      - mkdir -p ../.config/nvim
+      - stow nvim -t "../.config/nvim/"
   setup-zellij:
     cmds:
-    - mkdir -p ../.config/zellij 
-    - stow zellij -t "../.config/zellij/"
+      - mkdir -p ../.config/zellij
+      - stow zellij -t "../.config/zellij/"
   setup-aws:
-    cmds: 
-    - mkdir -p "~/.aws"
-    - cmd: cd private && stow aws -t "../../.aws"
-      ignore_error: true
-      
+    cmds:
+      - mkdir -p "~/.aws"
+      - cmd: cd private && stow aws -t "../../.aws"
+        ignore_error: true
+  setup-taskfile:
+    cmds:
+      - stow taskfile
