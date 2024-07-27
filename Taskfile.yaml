@@ -36,6 +36,7 @@ tasks:
     cmd: stow starship -t "../.config/"
   setup-nvim:
     cmds:
+      - rm -rf ~/.config/nvim
       - mkdir -p ../.config/nvim
       - stow nvim -t "../.config/nvim/"
   setup-zellij:

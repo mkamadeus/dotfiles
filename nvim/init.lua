@@ -1,1 +1,1 @@
-require("mkamadeus")
+require("config")
