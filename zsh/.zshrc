@@ -58,4 +58,3 @@ fi
 # ====== STARSHIP ======
 eval "$(starship init zsh)"
 
-
