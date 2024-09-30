@@ -17,7 +17,6 @@ plugins=(
   zsh-syntax-highlighting
   kubectl
   kubectx
-  ripgrep
   asdf
 )
 
@@ -49,6 +48,9 @@ export PATH="$PATH:$HOME/.cargo/bin"
 
 # ====== K9S ======
 export K9S_CONFIG_DIR="$HOME/.config/k9s"
+
+# ====== KREW ======
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 # ====== PRIVATE CONFIG =====
 if [[ -f "$HOME/.zshrc_private" ]]; then

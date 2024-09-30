@@ -17,7 +17,9 @@ tasks:
       - cmd: cd private && stow zsh -t "../../"
         ignore_error: true
   setup-git:
-    cmd: stow git
+    cmds:
+      - stow git
+      - cd private && stow git -t "../../"
   setup-kubernetes:
     cmds:
       - task: setup-kubie
@@ -51,3 +53,8 @@ tasks:
   setup-taskfile:
     cmds:
       - stow taskfile
+  setup-wezterm:
+    cmds:
+      - rm -rf ~/.config/wezterm
+      - mkdir -p ../.config/wezterm
+      - stow wezterm -t "../.config/wezterm/"

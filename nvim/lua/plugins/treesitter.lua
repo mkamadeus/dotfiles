@@ -35,6 +35,7 @@ return {
 				"c",
 				"terraform",
 				"hcl",
+				"rust,",
 			},
 		})
 	end,

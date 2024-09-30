@@ -1,4 +1,5 @@
 default_layout "layout"
+theme "catpuccin-macchiato"
 
 keybinds {
   shared_except "locked" {
